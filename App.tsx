@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react'
+import { View, Text, StyleSheet } from 'react-native'
+import Header from './components/Header';
+import { uuid } from 'uuidv4';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const App = () => {
+
+    const [items, setItems] = useState([
+
+    ]);
+
+    return (
+        <View style={styles.contianer}>
+            <Header title='Venda Produtos' />
+        </View>
+    )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styles =  StyleSheet.create({
+    contianer : {
+        flex:1,
+        paddingTop: 60
+    }
+})
+
+export default App;
